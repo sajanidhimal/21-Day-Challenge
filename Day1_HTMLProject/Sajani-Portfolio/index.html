@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sajani's Portfolio - Fullstack Developer, MERN Stack">
+    <meta name="keywords" content="Fullstack Developer, MERN, Web Development, Portfolio">
+
+    <title>Sajani's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4c9485ec13.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Nav Section here -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./favicon_io/favicon.ico" class="logo" alt="error">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>A Fullstack Developer</p>
+                <h1> Hi, I'm <span>Sajani</span> <br />From Bhaktapur, Nepal.</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About Section here-->
+    <div id="about">
+        <div class="container"></div>
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/sajani.jpg" alt="Sajani, Fullstack Developer from Bhaktapur, Nepal">
+
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, amet voluptatem. Dolorem
+                    corrupti rem obcaecati, reprehenderit quos quis iusto. Error quis minus delectus soluta inventore,
+                    officia unde sequi deserunt et eius mollitia a quibusdam maxime provident nemo ipsam asperiores
+                    architecto quo. Maiores eius numquam placeat excepturi itaque laborum modi ratione quod, omnis odit
+                    repudiandae!
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education </p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><strong>MERN Stack</strong><br />Full Stack Development (MongoDB, Express, React, Node.js)
+                        </li>
+                        <li><strong>Framework</strong><br />Express</li>
+                        <li><strong>Runtime</strong><br />Node.js</li>
+                        <li><strong>Database</strong><br />MongoDB (NoSQL)</li>
+                    </ul>
+
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Fresher</span><br /> Full Stack Developer Projects</li>
+                        <li><span>JS projects</span><br />Calculator, Weather Apps </li>
+                        <li><span> More Projects </span><br /> many projects </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br /> BSc Computing</li>
+                        <li><span>2024</span><br /> Mern Stack Course</li>
+                        <li><span>Certificates</span><br /> Soft Skills and Software Engineering</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Skill Section here -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2> Web Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                    <a href="#">Learn more</a>
+
+
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>MERN Stack Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Developer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                    <a href="#">Learn more</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Projects Section here -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div class="work">
+                    <img src="images/sajani.jpg" alt="error">
+                    <div class="layer">
+                        <h2>MERN Stack Project</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/sajani.jpg" alt="error">
+                    <div class="layer">
+                        <h2>JavaScript Projects</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/sajani.jpg" alt="error">
+                    <div class="layer">
+                        <h2>Ecommerce Website</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, neque.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">see more</a>
+
+        </div>
+    </div>
+
+    <!-- Contact Section here -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>sajanidhimal1111@gmail.com <i class="fa-solid fa-paper-plane"></i></p>
+                    <p>9861439735 <i class="fa-solid fa-square-phone"></i></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+
+
+                    </div>
+                    <a href="images/myresume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Sajani's Portfolio Website. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+
+</html>

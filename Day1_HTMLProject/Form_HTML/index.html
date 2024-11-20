@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover,
+        button[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .form-container legend {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .form-container .button-container {
+            text-align: center;
+        }
+
+        .form-container input[type="radio"],
+        .form-container input[type="checkbox"] {
+            width: auto;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">HTML FORM</h1>
+
+    <!-- YouTube Search Form -->
+    <div class="form-container">
+        <h2>YouTube Search</h2>
+        <form action="https://www.youtube.com/results" method="get">
+            <label for="youtube-search">Search for videos:</label>
+            <input type="text" id="youtube-search" name="search_query" placeholder="Search on YouTube" required>
+            <button type="submit">Search on YouTube</button>
+        </form>
+    </div>
+
+    <!-- Daraz Search Form -->
+    <div class="form-container">
+        <h2>Daraz Search</h2>
+        <form action="https://www.daraz.com.np/catalog" method="get">
+            <label for="daraz-search">Search for products:</label>
+            <input type="text" id="daraz-search" name="spm=a2a0e.tm80335409.search.d_go&q" placeholder="Search on Daraz"
+                required>
+            <button type="submit">Search on Daraz</button>
+        </form>
+    </div>
+
+    <!-- Basic Form -->
+    <div class="form-container">
+        <h2>My Form</h2>
+        <form action="/" method="post">
+            <label for="q">Query:</label>
+            <input type="text" id="q" name="q" placeholder="Enter your query" required>
+
+            <label for="a">Answer:</label>
+            <input type="text" id="a" name="a" placeholder="Enter your answer" required>
+
+            <label for="b">Additional Info:</label>
+            <input type="text" id="b" name="b" placeholder="Enter additional info" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Personal Information Form -->
+    <div class="form-container">
+        <h2>Personal Information</h2>
+        <form action="/submit-personal-info" method="POST">
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="first_name" placeholder="firstname" required>
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="last_name" placeholder="lastname" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="yourname@gmail.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required> Male
+                <input type="radio" id="female" name="gender" value="female" required> Female
+
+                <label for="subscribe">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+
+                <label for="plan">Choose Subscription Plan:</label>
+                <select id="plan" name="plan">
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                </select>
+
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- File Upload Form -->
+    <div class="form-container">
+        <h2>Upload Your Resume</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="resume">Choose your resume (PDF only):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required>
+            <button type="submit">Upload Resume</button>
+        </form>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="/contact" method="POST">
+            <label for="contact-name">Your Name:</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+
+            <label for="contact-email">Your Email:</label>
+            <input type="email" id="contact-email" name="email" placeholder="yourname@gmail.com" required>
+
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" name="message" placeholder="Write your message here..." rows="4"
+                required></textarea>
+
+            <div class="button-container">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Reset Form -->
+    <div class="form-container">
+        <h2>Reset Form Example</h2>
+        <form action="/reset-form" method="get">
+            <label for="reset-name">Name:</label>
+            <input type="text" id="reset-name" name="name" placeholder="Your name">
+
+            <label for="reset-email">Email:</label>
+            <input type="email" id="reset-email" name="email" placeholder="yourname@gmail.com">
+
+            <div class="button-container">
+                <button type="reset">Reset Form</button>
+                <button type="submit">Submit Form</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
