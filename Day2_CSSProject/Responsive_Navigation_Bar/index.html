@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <div class="brand-container">
+        <img src="logo.svg" alt="logo" />
+        <span>Responsive Navigation Bar</span>
+      </div>
+      <div class="menu-toggle">
+        <label for="menu-checkbox"><img src="hamburger.svg" alt="hamburger" /></label>
+      </div>
+      <input type="checkbox" id="menu-checkbox" />
+      <div class="nav-account-container">
+        <nav>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Dashboard_(business)">Dashboard</a></li>
+            <li class="learning">
+              <span>Learning</span> <img src="./dropdown.svg" alt="dropdown" />
+              <ul>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Beginner's Guide
+                    to Python</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Advanced JavaScript Programming</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="_blank">Mastering
+                    React.js</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Git_(software)" target="_blank">Version Control with Git</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/CSS_Grid_Layout" target="_blank">CSS Grid and Flexbox</a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Web_development" target="_blank">Web Development Bootcamp</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href=#>Services</a></li>
+            <li><a href=#>Support</a></li>
+          </ul>
+        </nav>
+        <div class="account">
+          <div class="profile-icon">
+            <img src="avatar.svg" alt="avatar" />
+            <div class="status-dot"></div>
+          </div>
+          <span>Sajani Dhimal</span>
+          <label class="close-menu" for="menu-checkbox">
+            <img src="close-icon.svg" alt="close-icon" />
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

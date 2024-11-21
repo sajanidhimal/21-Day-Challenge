@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #777;
+}
+
+/* Section Styles */
+.content-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: #333;
+}
+
+/* Flexbox Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.flex-item {
+    background-color: #f1c40f;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #2ecc71;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Box Model */
+.box-example {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #e74c3c;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.box-example:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Specificity Example */
+#section3 .box-example p {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Pseudo-elements */
+footer::before {
+    content: "💡 ";
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Pseudo-classes */
+a:hover {
+    color: #3498db;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
