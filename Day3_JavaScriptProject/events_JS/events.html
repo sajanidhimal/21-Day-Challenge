@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <script src="./event-script.js" defer></script>
+    </head>
+    <body>
+
+        <form method="POST" action="/api/save">
+            <input type="text" name="name" />
+            <input type="submit" />
+        </form>
+
+        <input type="checkbox" id="checkBox"  />
+        
+        <button id="myBtn">Click me</button>
+
+        <button onclick="removeListner()">Remove Listener</button>
+
+        <button onclick="checkFn()">click</button>
+        <button onDblclick="checkDblFn()" >Dbl click</button>
+        <button onMouseDown="checkMouseDownFn()">down</button>
+        <button onMouseMove="checkMouseMoveFn()"> move</button>
+        <button onMouseOut="checkMouseOutFn()">out</button>
+        <button onMouseOver="checkMouseOverFn()">over</button>
+        <button onMouseUp="checkMouseUpFn()">up</button>
+
+        <div>
+            <input type="text" onkeyup="keyHandler()" placeholder="key up"/>
+            <input type="text" onkeydown="keyHandler()" placeholder="key down"/>
+            <input type="text" onkeyPress="keyHandler()" placeholder="key press"/>
+
+
+        </div>
+    </body>
+</html>

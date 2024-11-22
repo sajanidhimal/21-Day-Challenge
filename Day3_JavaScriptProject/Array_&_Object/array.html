@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array and Object</title>
+    </head>
+    <script>
+        
+
+        let arrayVar=[9,6,3,5,8,9,0];
+
+        console.log(arrayVar.reduce((a,b)=>{
+            return a+b
+        },0));
+        
+        console.log(arrayVar.sort().reverse());
+
+        let text="programming";
+        console.log(text.split(""))
+
+        console.log(arrayVar.join(","))
+
+        console.log(text.lastIndexOf("g"))
+
+
+            let arr=[1,2,3]
+            let arr2=[4,5]
+            
+
+            let cancatedArr=arr.concat(arr2); //[1,2,3,4,5]
+
+            let calculatedSI=cancatedArr.map((i)=>{
+                return (i * 12 * 0.5) / 100;
+            })
+
+            console.log(calculatedSI)
+
+            console.log(cancatedArr.indexOf(4))
+
+            console.log(cancatedArr.includes(6))
+
+            let students=[
+                {name:"abc",age:10},
+                {name:"def",age:12},
+                {name:"ghi",age:13}
+            ]
+
+            let founddata=students.find((i)=>{
+                    return i.name=="abc"
+            })
+
+            console.log(founddata)
+
+
+            let studentDetails=[
+            {name:"Hari",address:"gokarna",roll_no:1},
+            {name:"Sabin",address:"Jorpati",roll_no:2},
+            {name:"Rabin",address:"Tusal",roll_no:3},
+            {name:"Sujan",address:"Chabel",roll_no:4},
+            {name:"Rujan",address:"maitidevi",roll_no:5},
+            {name:"Pujan",address:"Kalanli",roll_no:6},
+            {name:"Rabi",address:"dilibazar",roll_no:7},
+            {name:"Kabi",address:"sanepa",roll_no:8},
+            {name:"Nabin",address:"kupandol",roll_no:9},
+            {name:"Shreya",address:"gokarna",roll_no:10},
+
+            ];
+
+            let addedDetail=studentDetails.map((i)=>{
+                        return {...i,fee:"$10000"}
+            })
+
+            console.log(addedDetail)
+
+            // console.log(studentDetails[9].name)
+
+            // let founDetail=studentDetails.filter((i)=>{
+            //     console.log(i)
+            //   return  i.name.includes("jan")
+            // })
+
+            // console.log(studentDetails);
+            // console.log(founDetail)
+
+            let fn=fun()
+
+            fn();
+
+
+            function fun(){
+                let a=1
+                return function(){
+                    console.log(a)
+                }
+            }
+
+
+
+            function countDown(){
+                let count=0;
+                return {
+                    increment:function(){
+                        count++
+                        return count;
+                    },
+                    decrement:function(){
+                        count--;
+                        return count;
+                    },
+                    getCount:function(){
+                        return count;
+                    }
+                }
+            }
+
+            let countD=countDown();
+            console.log(countD.count);
+
+            countD.increment();
+            console.log(countD.getCount());
+
+
+            
+            // console.log(rollNo9Detail)
+
+            // for(let i=0;i <5;i++){
+            //     console.log(cancatedArr[i])
+            // }
+
+            // cancatedArr.forEach((i)=>{
+            //     console.log("from foreach")
+            //         console.log(i)
+            // })
+            
+
+            // function myFn(a){
+
+            //     return a();
+            //     // newfn()
+
+            // }
+
+            // let newFn=function(){
+            //     console.log("this is new function")
+            // }
+
+    
+
+            // myFn(()=>{
+            //     console.log("my own logic here")
+            // })
+
+
+//             doSomething(()=>{
+//                 domesomething(()=>{
+//                     doSomething(()=>{
+//                         dosomething(()=>{
+
+//                         })
+//                     })
+//                 })
+//             })
+
+//             promise()
+//             .then(res=>{})
+//             .then(res={})
+//             .then(res=>{})
+
+
+//              let myGn=async function(){
+// await dosomething();
+// await dosomething();
+// await dosomething();
+// await dosomething();
+
+//             }
+
+            // document.addEventListener('click',(event)=>{})
+
+    </script>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #cal {
+            width: 300px;
+            height: 380px;
+            background-color: #f0f0f0;
+            margin: 50px auto;
+            padding: 0px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+        }
+        input[type="text"] {
+            width: 280px;
+            height: 50px;
+            margin: 10px;
+            font-size: 20px;
+            text-align: right;
+
+        }
+        #txt {
+            width: 280px;
+            height: 50px;
+            margin: 10px;
+            font-size: 20px;
+            text-align: right;
+            color: black;
+            background-color: rgb(220, 220, 216);
+        }
+        input {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            color: white;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #1a1919;
+        }
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <form name="ff">
+            <input type="text" name="tt" placeholder="0" id="txt">
+            <br>
+            <input type="button" value="1" onclick="ff.tt.value+=1">
+            <input type="button" value="2" onclick="ff.tt.value+=2">
+            <input type="button" value="3" onclick="ff.tt.value+=3">
+            <input type="button" value="+" onclick="add()">
+            <br>
+            <input type="button" value="4" onclick="ff.tt.value+=4">
+            <input type="button" value="5" onclick="ff.tt.value+=5">
+            <input type="button" value="6" onclick="ff.tt.value+=6">
+            <input type="button" value="-" onclick="sub()">
+            <br>
+            <input type="button" value="7" onclick="ff.tt.value+=7">
+            <input type="button" value="8" onclick="ff.tt.value+=8">
+            <input type="button" value="9" onclick="ff.tt.value+=9">
+            <input type="button" value="*" onclick="mul()">
+            <br>
+            <input type="button" value="c" onclick="ff.tt.value=''">
+            <input type="button" value="0" onclick="ff.tt.value+=0">
+            <input type="button" value="=" onclick="ff.tt.value=eval(ff.tt.value=eval(ff.tt.value))">
+            <input type="button" value="/" onclick="div()">
+        </form>
+
+        <script>
+            function add() {
+                var abc=0, def=0;
+                abc= ff.tt.value;
+                def= abc.charAt(abc.length-1);
+                // alert(def);
+                if (def=='+' || def=="-" || def=="*" || def=="/") {
+                    ff.tt.value=abc.substring(0, abc.length-1);
+                    ff.tt.value+="+";
+                }
+                else {
+                    ff.tt.value+="+";
+                }
+            }
+
+            function sub() {
+                var abc=0, def=0;
+                abc= ff.tt.value;
+                def= abc.charAt(abc.length-1);
+                // alert(def);
+                if (def=='+' || def=="-" || def=="*" || def=="/") {
+                    ff.tt.value=abc.substring(0, abc.length-1);
+                    ff.tt.value+="-";
+                }
+                else {
+                    ff.tt.value+="-";
+                }
+            }
+
+            function mul() {
+                var abc=0, def=0;
+                abc= ff.tt.value;
+                def= abc.charAt(abc.length-1);
+                // alert(def);
+                if (def=='+' || def=="-" || def=="*" || def=="/") {
+                    ff.tt.value=abc.substring(0, abc.length-1);
+                    ff.tt.value+="*";
+                }
+                else {
+                    ff.tt.value+="*";
+                }
+            }
+
+            function div() {
+                var abc=0, def=0;
+                abc= ff.tt.value;
+                def= abc.charAt(abc.length-1);
+                // alert(def);
+                if (def=='+' || def=="-" || def=="*" || def=="/") {
+                    ff.tt.value=abc.substring(0, abc.length-1);
+                    ff.tt.value+="/";
+                }
+                else {
+                    ff.tt.value+="/";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>

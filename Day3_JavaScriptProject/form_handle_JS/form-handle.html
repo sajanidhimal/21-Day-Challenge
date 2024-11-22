@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <title>Form Handling</title>
+        <script src="./form-handle.js" defer></script>
+    </head>
+    <body>
+        <form id="myForm" action="/api/save" method="POST" onsubmit="return validation()">
+            <div>
+                <label>username</label>
+                <!-- onkeyup="userNameChange()"  -->
+                <input id="username" type="text" name="username" />
+                <p id="username-error"></p>
+            </div>
+            <div>
+                <label>Address</label>
+                <input id="address" type="text" name="address"/>
+            </div>
+            <div>
+                <input type="submit" value="save" />
+            </div>
+        </form>
+    </body>
+</html>

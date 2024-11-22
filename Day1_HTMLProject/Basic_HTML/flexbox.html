@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox</title>
+    </head>
+    <style>
+        body{
+            height: 100vh;
+        }
+.parent {
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
+}
+
+.parent .child{
+    height: 100px;
+    width: 100px;
+    /* flex-basis: 200px; */
+}
+
+.parent .child:first-child{
+    background-color: red;
+}
+.parent .child:last-child{
+    background-color: green;
+}
+/* .child:first-child{
+    flex-shrink: 1;
+   background-color: red;
+   
+} */
+/* .child:nth-child(2){
+    background-color: green;
+} */
+
+/* .child:last-child{
+    flex-shrink: 2;
+    background-color: yellow;
+}  */
+  .carrom{
+    border: red solid 1px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+  }
+
+  .carrom .d1{
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+  }
+
+  .carrom .d1:first-child{
+    background-color: green;
+    /* top:0px; */
+    /* left:0px; */
+  }
+
+  .carrom .d1:nth-child(2){
+    background-color: yellow;
+    /* top:0px; */
+    /* right: 0px; */
+  }
+
+  .carrom .d1:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+
+  .carrom .d1:last-child{
+    bottom:0px;
+    right: 0px;
+  }
+
+  .tran{
+    background-color: green;
+    width:100px;
+    height: 100px;
+    animation-name: anm;
+    animation-duration: 2s;
+    animation-iteration-count: 3;
+    /* transition: width 2s, height 2s, transform 2s; */
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-delay: 2s; */
+  }
+
+  @keyframes anm {
+    0%{
+        background-color: red;
+        width: 120px;
+    }
+    25%{
+        background-color: green;
+        width: 150px;
+    }
+    50%{
+        background-color: yellow;
+        width: 180px;
+    }
+    100%{
+        background-color: blue;
+        width: 200px;
+    }
+    
+  }
+  /* .tran:hover{
+    width:200px;
+    height: 200px;
+    transform: rotate(90deg);
+  } */
+
+
+  .resp{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (min-width:0px) and (max-width:576px) {
+    .resp{
+    background-color: yellow;
+
+  }
+  }
+  @media (min-width:577px) and (max-width:768px) {
+    .resp{
+    background-color: blue;
+
+  }
+  }
+    </style>
+    <body>
+        <div class="resp">
+
+        </div>
+        <!-- <div class="tran">
+
+        </div> -->
+        <!-- <div class="carrom">
+            <div class="d1">1</div>
+            <div class="d1">2</div>
+            <div class="d1">3</div>
+            <div class="d1">4</div>
+        </div> -->
+        <!-- <div class="parent">
+            <div class="child">
+                child 1
+            </div>
+            <div class="child">
+                child 2
+            </div>
+            <!-- <div class="child">
+                child 3
+            </div> -->
+         
+
+        </div>
+    </body>
+</html>

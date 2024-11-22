@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My js page</title>
+    
+
+        <script defer src="./script.js"></script>
+        <script defer src="./style-changes.js"></script>
+        <!-- <script>
+            alert("Welcome to the page")
+        </script> -->
+
+        <style>
+            #bulb{
+                height: 100px;width: 100px;background-color: red;
+            }
+
+            .bulb-css-class{
+                background-color: red;
+                color:white;
+                border-radius: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="additem">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+            <button onclick="addItem()">Add item</button>
+        </div>
+
+        <div class="append-portion">
+
+            <button onclick="clickMeToAppend()">append</button>
+        </div>
+
+        <div class="bulb-section">
+            <div id="bulb">
+
+            </div>
+
+            <div class="btn-section">
+                <button onclick="turnOn()">Turn On</button>
+                <button onclick="turnOff()">Turn Off</button>
+            </div>
+        </div>
+
+        <div>
+            <button id="myBtn" onClick="changeCss()">This is my button</button>
+        </div>
+
+        <div class="calculator">
+            <div class="textBox">
+                <input id="textBoxData" type="text" />
+            </div>
+            <div class="row">
+                <button id="one" onclick="displayElement('one')"><b>1</b></button>
+                <button id="two" onclick="displayElement('two')">2</button>
+                <button id="three" onclick="displayElement('three')">3</button>
+
+            </div>
+            <div class="row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+
+            </div>
+            <div class="row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+
+            </div>
+            <div class="row">
+                <button id="plus" onclick="displayElement('plus')">+</button>
+                <button id="mult" onclick="displayElement('mult')">*</button>
+
+                <button id="isEqualTo" onclick="isEqulTo()">=</button>
+            </div>
+        </div>
+
+        <div class="parent">
+            <div class="child">
+                <h2>inside child section</h2>
+            </div>
+        </div>
+        <h1 id="head1" class="head">My js page</h1>
+        <h1 id="head2" class="head">My js page 2</h1>
+
+        <button onclick="logic()">click me</button>
+    </body>
+
+</html>
